@@ -1,0 +1,22 @@
+<div>
+    <h1>{{ loginErrMsg }}</h1>
+    <form ng-controller="LRController">
+        Login name: <input type="text" ng-model="login_name" required/><br>
+        Password: <input type="password" ng-model="password" required/><br>
+        <input type="submit" ng-click="postReq(login_name,password)" value="Submit" />
+    </form>
+
+    <h1>{{ registerMsg }}</h1>
+    <form ng-controller="LRController">
+        * Login name: <input type="text" ng-model="new_login_name" required/><br><br>
+        * Password: <input type="password" ng-model="new_password" required/><br><br>
+        * Confirm password: <input type="password" ng-model="new_password_confirm" required/><br><br>
+        * First name: <input type="text" ng-model="first_name" required/><br><br>
+        * Last name: <input type="text" ng-model="last_name" required/><br><br>
+        Location: <input type="text" ng-model="location"/><br><br>
+        Description: <input type="text" ng-model="description"/><br><br>
+        Occupation: <input type="text" ng-model="occupation"/><br><br>
+        <input type="submit" ng-click="postRegist(new_login_name, new_password, new_password_confirm,
+        first_name, last_name, location, description, occupation)" value="Submit" />
+    </form>
+</div>

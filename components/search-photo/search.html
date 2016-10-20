@@ -1,0 +1,16 @@
+<div ng-repeat="photo in main.searchRes">
+    <div>
+        <img ng-src="/images/{{photo.file_name}}"/>
+        <div>Owner: <a ng-href="#/users/{{photo.user_id}}">{{photo.user_id}}</a></div>
+        <div ng-if="photo.comments.length > 0">Comments:
+            <div class='comment_block' ng-repeat="comment in photo.comments">
+                <ul>
+                    <li class="comment-intro">{{comment.date_time}}</li>
+                    <li class="comment-intro">{{comment.user_id}}</li>
+                    <li class="comment-text">{{comment.comment}}</li>
+                </ul>
+            </div>
+        </div>
+        <a ng-href="#/photos/{{photo.user_id}}">View the detail of this photo</a>
+    </div>
+</div>

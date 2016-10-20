@@ -1,0 +1,33 @@
+<form ng-controller="UserPhotosController">
+    <div ng-repeat="photo in main.photos">
+        <div class="photo">
+            <img ng-src="/images/{{photo.file_name}}"/>
+            <div><i>Created at: {{photo.date_time}}</i></div>
+            <div>
+                <ng-form ng-controller="favoriteController" ng-if="!photo.liked">
+                    <input type="submit" ng-click="favor(photo)" value="Like it!"/>
+                </ng-form>
+                <div ng-if="photo.liked"><i>This photo has been added to favorites.</i></div>
+            </div>
+            <div>
+                <Strong>Write Comment for This Photo:</Strong>
+                <br>
+                <ng-form ng-controller="SubmitCommentController">
+                    <textarea title='comment' ng-model="newComment" rows ="5"></textarea>
+                    <br><br>
+                    <input type="submit" ng-click="submitComment(photo)" value="Submit"/>
+                </ng-form>
+            </div>
+            <div ng-if="photo.comments.length > 0">Comments:
+                <div class='comment_block' ng-repeat="comment in photo.comments">
+                    <ul>
+                        <li class="comment-intro">{{comment.date_time}}</li>
+                        <li class="comment-intro">{{comment.user.first_name}} {{comment.user.last_name}}</li>
+                        <li class="comment-text">{{comment.comment}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr>
+    </div>
+</form>

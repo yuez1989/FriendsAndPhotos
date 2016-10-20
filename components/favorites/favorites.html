@@ -1,0 +1,6 @@
+<div ng-repeat="photo in favorites">
+    <a ng-href="images/{{photo.file_name}}" data-lightbox="{{photo.id}}" data-title="{{photo.date_time}}">
+        <img class="img-thumb" ng-src="/images/{{photo.file_name}}"/>
+    </a>
+    <input type="submit" value="Delete it" ng-click="deleteFavor(photo)"/>
+</div>

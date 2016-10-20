@@ -1,0 +1,8 @@
+<div class="text" layout='column' ng-if="loggedUser">
+    <div class="text-title">{{ main.title }}</div>
+    <div class="text-normal" ng-repeat="user in main.users">
+        <div><a ng-href="#/users/{{user.id}}">{{user.last_name}}, {{user.first_name}}</a></div>
+    </div>
+    <br><br>
+    <div class="text-favor"><a ng-href="#/favorites/">Favorite Photos</a></div>
+</div>

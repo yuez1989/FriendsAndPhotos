@@ -1,0 +1,26 @@
+.photo {
+    margin-top:20px;
+    margin-bottom:20px;
+    margin-left:20px;
+}
+.comment_block {
+    margin-left:20px;
+    margin-bottom:20px;
+    -moz-box-shadow: 0 2px 10px 1px #ecff8b;
+    -webkit-box-shadow: 0 2px 10px 1px #ecff8b;
+    box-shadow: 0 2px 10px 1px #ecff8b;
+    width: 50%;
+    background-color:#ecff8b;
+}
+
+li {
+    list-style-type: none;
+}
+
+.comment-intro {
+    font-style: italic;
+    font-weight: bold;
+}
+.comment-text {
+    font-style: normal;
+}

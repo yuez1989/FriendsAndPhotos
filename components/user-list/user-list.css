@@ -1,0 +1,18 @@
+.text {
+    text-align:center;
+}
+
+.text a{
+    text-decoration: none;
+}
+
+.text-title {
+    font-weight: bold;
+}
+
+.text-normal {
+}
+
+.text-favor a{
+    color: darkred;
+}

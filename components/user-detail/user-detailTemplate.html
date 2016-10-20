@@ -1,0 +1,10 @@
+<div>
+    <ul ng-if="main.user">
+        <li>User ID: {{main.user.id}}</li>
+        <li>Name: {{main.user.last_name}}, {{main.user.first_name}}</li>
+        <li>Location: {{main.user.location}}</li>
+        <li>Description: {{main.user.description}}</li>
+        <li>Occupation: {{main.user.occupation}}</li>
+    </ul>
+    <div><a ng-href="#/photos/{{main.user['_id']}}">See the photos of {{main.user.first_name}}</a></div>
+</div>
